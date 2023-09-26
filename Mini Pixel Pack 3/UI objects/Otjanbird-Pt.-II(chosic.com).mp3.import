@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qy4hvdcwn37j"
+path="res://.godot/imported/Otjanbird-Pt.-II(chosic.com).mp3-92aa35b545a5e2153ca4f6840f8f02bf.mp3str"
+
+[deps]
+
+source_file="res://Mini Pixel Pack 3/UI objects/Otjanbird-Pt.-II(chosic.com).mp3"
+dest_files=["res://.godot/imported/Otjanbird-Pt.-II(chosic.com).mp3-92aa35b545a5e2153ca4f6840f8f02bf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

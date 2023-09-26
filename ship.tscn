@@ -1,0 +1,159 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4xvwnhwx16sg"]
+
+[ext_resource type="Script" path="res://ship.gd" id="1_ev35s"]
+[ext_resource type="Texture2D" uid="uid://cl52mvvdb4e0w" path="res://Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png" id="2_gug4i"]
+[ext_resource type="PackedScene" uid="uid://dk1p5cp0io2l" path="res://bullet.tscn" id="2_j8d6r"]
+[ext_resource type="Texture2D" uid="uid://b1wys6v4mjimt" path="res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="4_51pba"]
+[ext_resource type="AudioStream" uid="uid://baqvikd63m8dk" path="res://Kabooooooom.mp3" id="5_dlgpu"]
+[ext_resource type="AudioStream" uid="uid://caavmsw6r1owh" path="res://pew_BDPqUne1.mp3" id="6_bvutd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yo1r"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="Animation" id="Animation_ah31k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_gug4i")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_tn4lt"]
+resource_name = "explosion"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_51pba")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+
+[sub_resource type="Animation" id="Animation_a57im"]
+resource_name = "normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_gug4i")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ieqdi"]
+_data = {
+"RESET": SubResource("Animation_ah31k"),
+"explosion": SubResource("Animation_tn4lt"),
+"normal": SubResource("Animation_a57im")
+}
+
+[node name="Ship" type="Area2D"]
+position = Vector2(120, 303)
+script = ExtResource("1_ev35s")
+bullet_scene = ExtResource("2_j8d6r")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gug4i")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1yo1r")
+
+[node name="GunCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "normal"
+libraries = {
+"": SubResource("AnimationLibrary_ieqdi")
+}
+
+[node name="Kaboom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_dlgpu")
+max_polyphony = 100
+
+[node name="Pew" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_bvutd")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]

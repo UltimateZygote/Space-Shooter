@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://87rp5r5ytiw6"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_4ccp4"]
+[ext_resource type="Texture2D" uid="uid://cq2rthw8g35m1" path="res://Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="1_5stmd"]
+[ext_resource type="Texture2D" uid="uid://c5qvyh173m35n" path="res://Mini Pixel Pack 3/UI objects/START (48 x 8).png" id="1_qdj1e"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ccp4")
+
+[node name="Start" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -20.0
+offset_right = -42.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("1_qdj1e")
+
+[node name="GameOver" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.5
+offset_top = -20.0
+offset_right = -35.5
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 4)
+texture_normal = ExtResource("1_5stmd")
+
+[connection signal="pressed" from="Start" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="GameOver" to="." method="_on_game_over_pressed"]
