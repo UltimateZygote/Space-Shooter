@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beuyht2ysr2va"
+path="res://.godot/imported/Interplanetary Odyssey.mp3-cfef8f1cef59fd73306c65ce9f8a1096.mp3str"
+
+[deps]
+
+source_file="res://Mini Pixel Pack 3/Projectiles/Interplanetary Odyssey.mp3"
+dest_files=["res://.godot/imported/Interplanetary Odyssey.mp3-cfef8f1cef59fd73306c65ce9f8a1096.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

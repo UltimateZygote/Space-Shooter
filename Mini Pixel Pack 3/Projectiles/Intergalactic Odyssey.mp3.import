@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr3p30dpfvgyt"
+path="res://.godot/imported/Intergalactic Odyssey.mp3-23979c2a3c3bd74e1542abd2ef9c0051.mp3str"
+
+[deps]
+
+source_file="res://Mini Pixel Pack 3/Projectiles/Intergalactic Odyssey.mp3"
+dest_files=["res://.godot/imported/Intergalactic Odyssey.mp3-23979c2a3c3bd74e1542abd2ef9c0051.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cu0p7vr6rng3w" path="res://enemy.tscn" id="2_qxoll"]
 [ext_resource type="PackedScene" uid="uid://c4xvwnhwx16sg" path="res://ship.tscn" id="2_t188r"]
 [ext_resource type="PackedScene" uid="uid://87rp5r5ytiw6" path="res://ui.tscn" id="5_b77r7"]
-[ext_resource type="AudioStream" uid="uid://cl68ffux2lr0q" path="res://Otjanbird-Pt.-II(chosic.com).mp3" id="6_xxv3r"]
+[ext_resource type="AudioStream" uid="uid://bit06qqgsc0st" path="res://Intergalactic Odyssey.mp3" id="7_1i2bc"]
 [ext_resource type="Texture2D" uid="uid://d0ftgr4wxb0x5" path="res://Mini Pixel Pack 3/UI objects/Number_font (8 x 8).png" id="7_q3dr0"]
 
 [sub_resource type="Animation" id="Animation_ntkrm"]
@@ -115,7 +115,7 @@ vframes = 2
 frame = 9
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_xxv3r")
+stream = ExtResource("7_1i2bc")
 volume_db = -2.0
 
 [connection signal="ship_go_boom" from="Ship" to="." method="_on_ship_ship_go_boom"]

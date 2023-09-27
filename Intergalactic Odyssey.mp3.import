@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bit06qqgsc0st"
+path="res://.godot/imported/Intergalactic Odyssey.mp3-6559dac2a614566043270d2a84466ccd.mp3str"
+
+[deps]
+
+source_file="res://Intergalactic Odyssey.mp3"
+dest_files=["res://.godot/imported/Intergalactic Odyssey.mp3-6559dac2a614566043270d2a84466ccd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
