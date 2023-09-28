@@ -1,23 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695927399
+::res://::1695929161
 bullet.gd::GDScript::-1::1695841354::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::232817316680580873::1695842493::0::1::::<><>::res://bullet.gd<>uid://dd1n4r57wm588::::res://Mini Pixel Pack 3/Projectiles/Player_missile_shots (16 x 16).png
+bullet.tscn::PackedScene::232817316680580873::1695927907::0::1::::<><>::res://bullet.gd<>uid://dd1n4r57wm588
 enemy.gd::GDScript::-1::1695841354::0::1::::<>Area2D<>::
-enemy.tscn::PackedScene::6229196714978560638::1695842493::0::1::::<><>::res://enemy.gd<>uid://cy6kb4x3j4ino::::res://Mini Pixel Pack 3/Enemies/Bon_Bon (16 x 16).png<>uid://b1wys6v4mjimt::::res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png<>uid://snv2nxj00xth::::res://kaboom_Bl71L0bK.mp3
+enemy.tscn::PackedScene::6229196714978560638::1695927906::0::1::::<><>::res://enemy.gd<>uid://cy6kb4x3j4ino
+icon.png::CompressedTexture2D::2615542015382376802::1695929161::1695929162::1::::<><>::
 icon.svg::CompressedTexture2D::7418172552233943767::1695841354::1695841354::1::::<><>::
 Intergalactic Odyssey.mp3::AudioStreamMP3::2988728759941956939::1695842388::1695842388::1::::<><>::
 Interplanetary Odyssey.mp3::AudioStreamMP3::5163143829605027189::1695842385::1695842385::1::::<><>::
 kaboom_Bl71L0bK.mp3::AudioStreamMP3::1291560088348278433::1695841354::1695841354::1::::<><>::
 Kabooooooom.mp3::AudioStreamMP3::2420740602271732532::1695841354::1695841354::1::::<><>::
-main.gd::GDScript::-1::1695841354::0::1::::<>Node2D<>::
-main.tscn::PackedScene::2041916237397696609::1695842493::0::1::::<><>::res://main.gd<>uid://cypvn578b3iyi::::res://Mini Pixel Pack 3/Space_BG (2 frames) (64 x 64).png<>uid://cu0p7vr6rng3w::::res://enemy.tscn<>uid://c4xvwnhwx16sg::::res://ship.tscn<>uid://87rp5r5ytiw6::::res://ui.tscn<>uid://bit06qqgsc0st::::res://Intergalactic Odyssey.mp3<>uid://d0ftgr4wxb0x5::::res://Mini Pixel Pack 3/UI objects/Number_font (8 x 8).png
+main.gd::GDScript::-1::1695927953::0::1::::<>Node2D<>::
+main.tscn::PackedScene::2041916237397696609::1695928703::0::1::::<><>::res://main.gd<>uid://cypvn578b3iyi::::res://Mini Pixel Pack 3/Space_BG (2 frames) (64 x 64).png<>uid://cu0p7vr6rng3w::::res://enemy.tscn<>uid://c4xvwnhwx16sg::::res://ship.tscn<>uid://87rp5r5ytiw6::::res://ui.tscn<>uid://bit06qqgsc0st::::res://Intergalactic Odyssey.mp3<>uid://d0ftgr4wxb0x5::::res://Mini Pixel Pack 3/UI objects/Number_font (8 x 8).png<>uid://cftchvs48ctv6::::res://Interplanetary Odyssey.mp3
 Otjanbird-Pt.-II(chosic.com).mp3::AudioStreamMP3::5610927242105616910::1695841354::1695841354::1::::<><>::
 pew_BDPqUne1.mp3::AudioStreamMP3::4774138834599411051::1695841354::1695841354::1::::<><>::
+Player_ship_icon(16 x 16).png::CompressedTexture2D::2209912461129237943::1695928682::1695928682::1::::<><>::
 ship.gd::GDScript::-1::1695841354::0::1::::<>Area2D<>::
-ship.tscn::PackedScene::6857113560195075750::1695842493::0::1::::<><>::res://ship.gd<>uid://cl52mvvdb4e0w::::res://Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png<>uid://dk1p5cp0io2l::::res://bullet.tscn<>uid://b1wys6v4mjimt::::res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png<>uid://baqvikd63m8dk::::res://Kabooooooom.mp3<>uid://caavmsw6r1owh::::res://pew_BDPqUne1.mp3
+ship.tscn::PackedScene::6857113560195075750::1695927907::0::1::::<><>::res://ship.gd<>uid://cl52mvvdb4e0w
 ui.gd::GDScript::-1::1695841354::0::1::::<>Control<>::
-ui.tscn::PackedScene::2383352507328655811::1695842493::0::1::::<><>::res://ui.gd<>uid://cq2rthw8g35m1::::res://Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png<>uid://c5qvyh173m35n::::res://Mini Pixel Pack 3/UI objects/START (48 x 8).png
-::res://Mini Pixel Pack 3/::1695841354
+ui.tscn::PackedScene::2383352507328655811::1695927907::0::1::::<><>::res://ui.gd<>uid://cq2rthw8g35m1
+::res://Mini Pixel Pack 3/::1695928221
 LICENSE.txt::TextFile::-1::1695841354::0::1::::<><>::
 Space_BG (2 frames) (64 x 64).png::CompressedTexture2D::6489639179814796904::1695841354::1695841354::1::::<><>::
 ::res://Mini Pixel Pack 3/Effects/::1695841354
