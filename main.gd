@@ -11,7 +11,7 @@ var available_enemy_positions = []
 
 @export var enemy : PackedScene
 func _ready():
-	$AudioStreamPlayer.play()
+	$PauseMusic.play()
 
 
 func spawn_enemies():
@@ -52,6 +52,8 @@ func _on_ui_start_game():
 	timer_start = true
 	spawn_enemies()
 	$Ship.start_ship()
+	$PauseMusic.stop()
+	$MainMusic.play()
 
 
 func _on_ship_ship_go_boom():
@@ -59,14 +61,14 @@ func _on_ship_ship_go_boom():
 	get_tree().call_group("enemies", "queue_free")
 	$UI/Start.hide()
 	$UI/GameOver.show()
+	$PauseMusic.play()
+	$MainMusic.stop()
 	enemy_wait_time_min = 2
 	enemy_wait_time_max = 10
 	enemy_speed_min = 75
 	enemy_speed_max = 100
 
 
-func _on_audio_stream_player_finished():
-	$AudioStreamPlayer.play()
 	
 
 func on_enemy_death(start_pos):
@@ -84,3 +86,11 @@ func on_enemy_exit_screen(body, start_pos):
 		available_enemy_positions.append(start_pos)
 	else:
 		body.reset_pos(start_pos)
+
+
+func _on_main_music_finished():
+	$MainMusic.play()
+
+
+func _on_pause_music_finished():
+	$PauseMusic.play()

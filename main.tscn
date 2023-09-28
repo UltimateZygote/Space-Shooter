@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://4decd14p2dg8"]
+[gd_scene load_steps=13 format=3 uid="uid://4decd14p2dg8"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_00sn7"]
 [ext_resource type="Texture2D" uid="uid://cypvn578b3iyi" path="res://Mini Pixel Pack 3/Space_BG (2 frames) (64 x 64).png" id="1_f7apm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://87rp5r5ytiw6" path="res://ui.tscn" id="5_b77r7"]
 [ext_resource type="AudioStream" uid="uid://bit06qqgsc0st" path="res://Intergalactic Odyssey.mp3" id="7_1i2bc"]
 [ext_resource type="Texture2D" uid="uid://d0ftgr4wxb0x5" path="res://Mini Pixel Pack 3/UI objects/Number_font (8 x 8).png" id="7_q3dr0"]
+[ext_resource type="AudioStream" uid="uid://cftchvs48ctv6" path="res://Interplanetary Odyssey.mp3" id="8_f6li7"]
 
 [sub_resource type="Animation" id="Animation_ntkrm"]
 length = 0.001
@@ -114,10 +115,15 @@ hframes = 5
 vframes = 2
 frame = 9
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_1i2bc")
-volume_db = -2.0
+volume_db = -30.0
+
+[node name="PauseMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_f6li7")
+volume_db = -30.0
 
 [connection signal="ship_go_boom" from="Ship" to="." method="_on_ship_ship_go_boom"]
 [connection signal="start_game" from="UI" to="." method="_on_ui_start_game"]
-[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="finished" from="MainMusic" to="." method="_on_main_music_finished"]
+[connection signal="finished" from="PauseMusic" to="." method="_on_pause_music_finished"]
