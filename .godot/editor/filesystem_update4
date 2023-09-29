@@ -3,4 +3,4 @@ res://enemy.tscn
 res://ui.tscn
 res://ship.tscn
 res://bullet.tscn
-res://main.gd
+res://bullet.gd
