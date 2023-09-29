@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695955867
+::res://::1695955922
 bullet.gd::GDScript::-1::1695955441::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::232817316680580873::1695955441::0::1::::<><>::res://bullet.gd<>uid://dd1n4r57wm588::::res://Mini Pixel Pack 3/Projectiles/Player_missile_shots (16 x 16).png
 enemy.gd::GDScript::-1::1695955441::0::1::::<>Area2D<>::
