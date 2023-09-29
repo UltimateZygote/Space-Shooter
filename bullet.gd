@@ -1,7 +1,7 @@
 extends Area2D
 
 var prev_speed = 250.0 # pixels/sec
-var acceleration = -0.82 # pixels/sec^2
+var acceleration = -0.65 # pixels/sec^2
 
 func start(pos):
 	position = pos
