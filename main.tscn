@@ -117,11 +117,11 @@ frame = 9
 
 [node name="MainMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_1i2bc")
-volume_db = -30.0
+volume_db = -40.0
 
 [node name="PauseMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_f6li7")
-volume_db = -30.0
+volume_db = -20.0
 
 [connection signal="ship_go_boom" from="Ship" to="." method="_on_ship_ship_go_boom"]
 [connection signal="start_game" from="UI" to="." method="_on_ui_start_game"]
