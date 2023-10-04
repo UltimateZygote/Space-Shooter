@@ -15,10 +15,12 @@ func _ready():
 
 func start():
 	$AnimationPlayer.play("normal")
+	$AnimationPlayer2.play("booster_flicker")
 	position = Vector2(screensize.x / 2, screensize.y - 64)
 	$GunCooldown.wait_time = cooldown
 	$Sprite2D.frame = 1
 	$Sprite2D.show()
+	$Booster.show()
 
 
 func _process(delta):
@@ -29,10 +31,13 @@ func _process(delta):
 	var input = Input.get_vector("left", "right", "up", "down")
 	if input.x > 0:
 		$Sprite2D.frame = 2
+		$Booster.texture = preload("res://Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png")
 	elif input.x < 0:
 		$Sprite2D.frame = 0
+		$Booster.texture = preload("res://Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png")
 	else:
 		$Sprite2D.frame = 1
+		$Booster.texture = preload("res://Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png")
 	position += input * speed * delta
 	position = position.clamp(Vector2(8, 7), screensize - Vector2(8, 7))
 
@@ -67,6 +72,7 @@ func _on_area_entered(area):
 func explode():
 	shoot_pause = true
 	move_pause = true
+	$Booster.hide()
 	$AnimationPlayer.play("explosion")
 	$Kaboom.play()
 	set_deferred("monitorable", false)

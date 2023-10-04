@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4xvwnhwx16sg"]
+[gd_scene load_steps=15 format=3 uid="uid://c4xvwnhwx16sg"]
 
 [ext_resource type="Script" path="res://ship.gd" id="1_ev35s"]
 [ext_resource type="Texture2D" uid="uid://cl52mvvdb4e0w" path="res://Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png" id="2_gug4i"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b1wys6v4mjimt" path="res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="4_51pba"]
 [ext_resource type="AudioStream" uid="uid://baqvikd63m8dk" path="res://Kabooooooom.mp3" id="5_dlgpu"]
 [ext_resource type="AudioStream" uid="uid://caavmsw6r1owh" path="res://pew_BDPqUne1.mp3" id="6_bvutd"]
+[ext_resource type="Texture2D" uid="uid://dwoi0b5ta3jbt" path="res://Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png" id="7_1c6w8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yo1r"]
 radius = 6.0
@@ -44,6 +45,18 @@ tracks/2/path = NodePath("Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Booster:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -124,6 +137,28 @@ _data = {
 "normal": SubResource("Animation_a57im")
 }
 
+[sub_resource type="Animation" id="Animation_jwb2o"]
+resource_name = "booster_flicker"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Booster:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t2hsr"]
+_data = {
+"booster_flicker": SubResource("Animation_jwb2o")
+}
+
 [node name="Ship" type="Area2D"]
 position = Vector2(120, 303)
 script = ExtResource("1_ev35s")
@@ -148,12 +183,24 @@ libraries = {
 "": SubResource("AnimationLibrary_ieqdi")
 }
 
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_t2hsr")
+}
+
 [node name="Kaboom" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_dlgpu")
 max_polyphony = 100
 
 [node name="Pew" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_bvutd")
+
+[node name="Booster" type="Sprite2D" parent="."]
+position = Vector2(0, 15)
+rotation = 0.000196515
+texture = ExtResource("7_1c6w8")
+hframes = 2
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
