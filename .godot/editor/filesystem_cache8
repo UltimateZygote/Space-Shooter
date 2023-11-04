@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697062796
+::res://::1697848547
 bullet.gd::GDScript::-1::1695956104::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::232817316680580873::1696104496::0::1::::<><>::res://bullet.gd<>uid://dd1n4r57wm588::::res://Mini Pixel Pack 3/Projectiles/Player_missile_shots (16 x 16).png
 enemy.gd::GDScript::-1::1695955441::0::1::::<>Area2D<>::
@@ -19,25 +19,25 @@ ship.gd::GDScript::-1::1696104495::0::1::::<>Area2D<>::
 ship.tscn::PackedScene::6857113560195075750::1696104547::0::1::::<><>::res://ship.gd<>uid://cl52mvvdb4e0w::::res://Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png<>uid://dk1p5cp0io2l::::res://bullet.tscn<>uid://b1wys6v4mjimt::::res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png<>uid://baqvikd63m8dk::::res://Kabooooooom.mp3<>uid://caavmsw6r1owh::::res://pew_BDPqUne1.mp3<>uid://dwoi0b5ta3jbt::::res://Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png
 ui.gd::GDScript::-1::1695955441::0::1::::<>Control<>::
 ui.tscn::PackedScene::2383352507328655811::1696104496::0::1::::<><>::res://ui.gd<>uid://cq2rthw8g35m1::::res://Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png<>uid://c5qvyh173m35n::::res://Mini Pixel Pack 3/UI objects/START (48 x 8).png
-::res://Mini Pixel Pack 3/::1697061528
+::res://Mini Pixel Pack 3/::1697846003
 LICENSE.txt::TextFile::-1::1695955441::0::1::::<><>::
 Space_BG (2 frames) (64 x 64).png::CompressedTexture2D::6489639179814796904::1695955441::1695955441::1::::<><>::
-::res://Mini Pixel Pack 3/Effects/::1697061528
+::res://Mini Pixel Pack 3/Effects/::1697846004
 Explosion (16 x 16).png::CompressedTexture2D::4258237942986715315::1695955441::1695955441::1::::<><>::
 Sparkle (16 x 16).png::CompressedTexture2D::4661690230871229444::1695955441::1695955441::1::::<><>::
-::res://Mini Pixel Pack 3/Enemies/::1697061528
+::res://Mini Pixel Pack 3/Enemies/::1697846004
 Alan (16 x 16).png::CompressedTexture2D::2201691144222963511::1695955441::1695955441::1::::<><>::
 Bon_Bon (16 x 16).png::CompressedTexture2D::6521979840789426080::1695955441::1695955441::1::::<><>::
 Lips (16 x 16).png::CompressedTexture2D::8846132999644308965::1695955441::1695955441::1::::<><>::
-::res://Mini Pixel Pack 3/Items/::1697061528
+::res://Mini Pixel Pack 3/Items/::1697846004
 Circle_+_Square_+_Missile_pick-ups (16 x 16).png::CompressedTexture2D::1685768401521943761::1695955441::1695955441::1::::<><>::
 Power_item (16 x 16).png::CompressedTexture2D::1268267806615324863::1695955441::1695955441::1::::<><>::
-::res://Mini Pixel Pack 3/Player ship/::1697061528
+::res://Mini Pixel Pack 3/Player ship/::1697846003
 Boosters (16 x 16).png::CompressedTexture2D::8732848380194473241::1695955441::1695955441::1::::<><>::
 Boosters_left (16 x 16).png::CompressedTexture2D::7524131303493341046::1695955441::1695955441::1::::<><>::
 Boosters_right (16 x 16).png::CompressedTexture2D::6802059863521851449::1695955441::1695955441::1::::<><>::
 Player_ship (16 x 16).png::CompressedTexture2D::5608511903927938576::1695955441::1695955441::1::::<><>::
-::res://Mini Pixel Pack 3/Projectiles/::1697061528
+::res://Mini Pixel Pack 3/Projectiles/::1697846004
 Enemy_projectile (16 x 16).png::CompressedTexture2D::3311970774920419989::1695955441::1695955441::1::::<><>::
 Intergalactic Odyssey.mp3::AudioStreamMP3::8411237045567574515::1695955441::1695955441::1::::<><>::
 Interplanetary Odyssey.mp3::AudioStreamMP3::2709934362478731806::1695955441::1695955441::1::::<><>::
@@ -48,7 +48,7 @@ Player_charged_square_shot (16 x 16).png::CompressedTexture2D::58958741756818000
 Player_donut_shot (16 x 16).png::CompressedTexture2D::1529660679415304300::1695955441::1695955441::1::::<><>::
 Player_missile_shots (16 x 16).png::CompressedTexture2D::7424344453253085883::1695955441::1695955441::1::::<><>::
 Player_square_shot (16 x 16).png::CompressedTexture2D::2929895458883207510::1695955441::1695955441::1::::<><>::
-::res://Mini Pixel Pack 3/UI objects/::1697061528
+::res://Mini Pixel Pack 3/UI objects/::1697846003
 GAME_OVER (72 x 8).png::CompressedTexture2D::5952667587073227914::1695955441::1695955441::1::::<><>::
 Item_held_box (16 x 16).png::CompressedTexture2D::5587790459219499922::1695955441::1695955441::1::::<><>::
 Number_font (8 x 8).png::CompressedTexture2D::8925470307153068424::1695955441::1695955441::1::::<><>::
