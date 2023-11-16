@@ -3,6 +3,7 @@ extends Node2D
 var seconds = 0
 var stopwatch = 0
 var timer_start = false
+var on_death_screen = false
 var enemy_wait_time_min = 2
 var enemy_wait_time_max = 10
 var enemy_speed_min = 120
@@ -50,6 +51,7 @@ func counter_frame(digit):
 func _on_ui_start_game():
 	stopwatch = 0
 	timer_start = true
+	on_death_screen = false
 	spawn_enemies()
 	$Ship.start_ship()
 	$PauseMusic.stop()
@@ -58,7 +60,9 @@ func _on_ui_start_game():
 
 func _on_ship_ship_go_boom():
 	timer_start = false
+	on_death_screen = true
 	get_tree().call_group("enemies", "queue_free")
+	await $Ship/AnimationPlayer.animation_finished
 	$UI/Start.hide()
 	$UI/GameOver.show()
 	$PauseMusic.play()
@@ -69,9 +73,9 @@ func _on_ship_ship_go_boom():
 	enemy_speed_max = 100
 
 
-	
-
 func on_enemy_death(start_pos):
+	if on_death_screen:
+		return
 	available_enemy_positions.append(start_pos)
 	await get_tree().create_timer(.1).timeout
 	if get_tree().get_nodes_in_group("enemies").size() == 0:
