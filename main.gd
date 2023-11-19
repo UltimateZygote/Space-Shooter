@@ -53,9 +53,10 @@ func _on_ui_start_game():
 	timer_start = true
 	on_death_screen = false
 	spawn_enemies()
-	$Ship.start_ship()
 	$PauseMusic.stop()
 	$MainMusic.play()
+	await get_tree().create_timer(.2).timeout
+	$Ship.start_ship()
 
 
 func _on_ship_ship_go_boom():
@@ -63,8 +64,8 @@ func _on_ship_ship_go_boom():
 	on_death_screen = true
 	get_tree().call_group("enemies", "queue_free")
 	await $Ship/AnimationPlayer.animation_finished
-	$UI/Start.hide()
-	$UI/GameOver.show()
+	#$UI/Start.hide()
+	$UI.game_over()
 	$PauseMusic.play()
 	$MainMusic.stop()
 	enemy_wait_time_min = 2

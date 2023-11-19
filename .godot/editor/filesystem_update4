@@ -1,6 +1,9 @@
-res://main.tscn
-res://main.gd
-res://enemy.tscn
 res://ui.tscn
+res://main.tscn
+res://enemy.tscn
 res://ship.tscn
 res://bullet.tscn
+res://ui.gd
+res://main.gd
+res://ship.gd
+res://enemy.gd

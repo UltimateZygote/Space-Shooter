@@ -75,9 +75,11 @@ func explode():
 	$Booster.hide()
 	$AnimationPlayer.play("explosion")
 	$Kaboom.play()
+	Input.start_joy_vibration(0, 1, 0)
 	set_deferred("monitorable", false)
 	ship_go_boom.emit()
 	await $AnimationPlayer.animation_finished
+	Input.stop_joy_vibration(0)
 	$Sprite2D.hide()
 	
 

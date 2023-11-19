@@ -46,6 +46,9 @@ func explode():
 	$AnimationPlayer.play("explode")
 	$Kaboom.play()
 	set_deferred("monitorable", false)
+	Input.start_joy_vibration(0, .4, 0)
+	await $AnimationPlayer.animation_finished
+	Input.stop_joy_vibration(0)
 	await $Kaboom.finished
 	enemy_death.emit(start_pos)
 	queue_free()
